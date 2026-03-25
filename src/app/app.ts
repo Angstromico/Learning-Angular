@@ -1,22 +1,26 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Home as HomeComponent } from './home/home';
+import { Header } from './components/header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HomeComponent, Header],
   template: `
-    <h1>Hello, {{ title() }}</h1>
-    <p>This is a p</p>
+    <app-header />
+
+    <main>
+      <section>
+        <app-home />
+      </section>
+    </main>
 
     <router-outlet />
   `,
   styles: [
     `
-      h1 {
-        color: blue;
-      }
-      p {
-        font-weight: 700;
+      main {
+        padding: 16px;
       }
     `,
   ],
