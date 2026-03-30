@@ -11,7 +11,7 @@ import { Header } from './components/header/header';
 
     <main>
       <section>
-        <app-home />
+        <app-home [grettings]="title()" />
       </section>
     </main>
 
@@ -26,5 +26,5 @@ import { Header } from './components/header/header';
   ],
 })
 export class App {
-  protected readonly title = signal('first-ng-app');
+  protected readonly title = signal('Hello from Angular');
 }

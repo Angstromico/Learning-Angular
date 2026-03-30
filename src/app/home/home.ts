@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Grettings } from '../components/grettings/grettings';
 
 @Component({
@@ -7,4 +7,6 @@ import { Grettings } from '../components/grettings/grettings';
   styleUrl: './home.scss',
   imports: [Grettings],
 })
-export class Home {}
+export class Home {
+  @Input() grettings: string = 'Hello World';
+}
