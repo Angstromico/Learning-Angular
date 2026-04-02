@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './grettings.scss',
 })
 export class Grettings {
-  @Input() grettings: string = 'HelloWorld';
+  @Input() grettings = 'HelloWorld';
 }
